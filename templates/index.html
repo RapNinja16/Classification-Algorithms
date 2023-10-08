@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profit Prediction</title>
+</head>
+<body>
+    <h1>Profit Prediction</h1>
+    <form method="POST" action="/predict">
+        <label for="input1">R&D Spend:</label>
+            <input type="text" name="input1" id="input1" required><br><br>
+        <label for="input2">Administration: </label>
+            <input type="text" name="input2" id="input2" required><br><br>
+        <label for="input3">Marketing Spend	:</label>
+            <input type="text" name="input3" id="input3" required><br><br>
+        <input type="submit" value="Predict">
+    </form>
+    {% if prediction %}
+    <h2>Predicted Profit:</h2>
+    <p>{{ prediction }}</p>
+    {% endif %}
+</body>
+</html>
